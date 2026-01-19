@@ -6,7 +6,10 @@ import type { MenuItem } from '../components/Sidebar'
 const meta: Meta<typeof Sidebar> = {
     title: 'Components/Sidebar',
     component: Sidebar,
-    tags: ['autodocs']
+    tags: ['autodocs'],
+    parameters: {
+        layout: 'fullscreen'
+    }
 }
 
 export default meta
@@ -93,7 +96,7 @@ const SidebarDemo = ({ menuItems }: { menuItems: MenuItem[] }) => {
     const [isOpen, setIsOpen] = useState(true)
 
     return (
-        <div style={{ padding: '20px' }}>
+        <div style={{ minHeight: '600px', padding: '20px', position: 'relative' }}>
             <button
                 onClick={() => setIsOpen(true)}
                 style={{
@@ -134,7 +137,7 @@ export const Closed: Story = {
     render: () => {
         const [isOpen, setIsOpen] = useState(false)
         return (
-            <div style={{ padding: '20px' }}>
+            <div style={{ minHeight: '600px', padding: '20px', position: 'relative' }}>
                 <button
                     onClick={() => setIsOpen(true)}
                     style={{

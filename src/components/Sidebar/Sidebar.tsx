@@ -2,7 +2,6 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { useClickOutside, useExpandedItems } from './Sidebar.hooks'
 import type { SidebarProps, MenuItem } from './Sidebar.types'
 import {
-    Overlay,
     SidebarContainer,
     SidebarHeader,
     SidebarTitle,
@@ -91,17 +90,42 @@ export const Sidebar = ({ menuItems, isOpen, onClose }: SidebarProps) => {
     const { toggleItemExpansion, isItemExpanded } = useExpandedItems()
 
     return (
-        <>
-            <Overlay $isOpen={isOpen} onClick={onClose} />
-
-            <AnimatePresence>
-                {isOpen && (
+        <AnimatePresence>
+            {isOpen && (
+                <>
                     <motion.div
+                        key="overlay"
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                        transition={{ duration: 0.3, ease: 'easeInOut' }}
+                        style={{
+                            position: 'fixed',
+                            top: 0,
+                            left: 0,
+                            right: 0,
+                            bottom: 0,
+                            background: 'rgba(0, 0, 0, 0.5)',
+                            zIndex: 998
+                        }}
+                        onClick={onClose}
+                    />
+
+                    <motion.div
+                        key="sidebar"
                         initial={{ x: '100%' }}
                         animate={{ x: 0 }}
                         exit={{ x: '100%' }}
-                        transition={{ type: 'tween', duration: 0.3, ease: 'easeInOut' }}
-                        style={{ position: 'fixed', top: 0, right: 0, bottom: 0, zIndex: 999 }}
+                        transition={{ duration: 0.3, ease: 'easeInOut' }}
+                        style={{
+                            position: 'fixed',
+                            top: 0,
+                            right: 0,
+                            bottom: 0,
+                            zIndex: 999,
+                            width: '320px',
+                            maxWidth: '90vw'
+                        }}
                     >
                         <SidebarContainer ref={sidebarRef}>
                             <SidebarHeader>
@@ -124,8 +148,8 @@ export const Sidebar = ({ menuItems, isOpen, onClose }: SidebarProps) => {
                             </MenuList>
                         </SidebarContainer>
                     </motion.div>
-                )}
-            </AnimatePresence>
-        </>
+                </>
+            )}
+        </AnimatePresence>
     )
 }

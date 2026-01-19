@@ -75,6 +75,9 @@ npm install
 # Run Storybook (recommended for development)
 npm run storybook
 
+# Run live demo app with all components
+npm run demo
+
 # Run tests
 npm test
 
@@ -93,6 +96,22 @@ npm run check-all
 # Build library
 npm run build
 ```
+
+## 🎮 Live Demo
+
+Experience all components working together in a real application:
+
+```bash
+npm run demo
+```
+
+The demo app includes:
+- **Form with Input components** - Text, email, and password fields with validation
+- **Toast notifications** - Success, error, and info messages triggered by form interactions
+- **Sidebar menu** - Multi-level nested navigation with smooth animations
+- **Real-world integration** - See how components work together seamlessly
+
+Open http://localhost:5173 in your browser to try the demo.
 
 ## 📖 Usage Examples
 

@@ -12,15 +12,9 @@ export const Overlay = styled.div<{ $isOpen: boolean }>`
 `
 
 export const SidebarContainer = styled.div`
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  width: 320px;
-  max-width: 90vw;
+  height: 100%;
   background: white;
   box-shadow: -2px 0 12px rgba(0, 0, 0, 0.15);
-  z-index: 999;
   overflow-y: auto;
   padding: 24px 0;
 `

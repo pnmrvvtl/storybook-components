@@ -2,21 +2,21 @@ import styled from 'styled-components'
 import type { ToastVariant } from './Toast.types'
 
 const variantColors: Record<ToastVariant, { background: string; border: string; icon: string }> = {
-    success: {
-        background: '#ecfdf5',
-        border: '#10b981',
-        icon: '#059669'
-    },
-    error: {
-        background: '#fef2f2',
-        border: '#ef4444',
-        icon: '#dc2626'
-    },
-    info: {
-        background: '#eff6ff',
-        border: '#3b82f6',
-        icon: '#2563eb'
-    }
+  success: {
+    background: '#ecfdf5',
+    border: '#10b981',
+    icon: '#059669'
+  },
+  error: {
+    background: '#fef2f2',
+    border: '#ef4444',
+    icon: '#dc2626'
+  },
+  info: {
+    background: '#eff6ff',
+    border: '#3b82f6',
+    icon: '#2563eb'
+  }
 }
 
 export const ToastContainer = styled.div`
@@ -28,6 +28,7 @@ export const ToastContainer = styled.div`
   gap: 12px;
   z-index: 9999;
   pointer-events: none;
+  max-width: calc(100vw - 48px);
 
   > * {
     pointer-events: auto;

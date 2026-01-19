@@ -105,6 +105,7 @@ npm run demo
 - **React Hook Form 7** - Form validation and state management
 - **Vitest** - Fast unit testing framework
 - **ESLint** - Code quality and consistency
+- **Husky** - Git hooks for pre-commit quality checks
 - **Vite** - Lightning-fast build tool
 
 ## 📦 Components
@@ -306,6 +307,15 @@ Run all checks at once:
 ```bash
 npm run check-all
 ```
+
+### Pre-commit Hooks
+
+Husky is configured to automatically run `npm run check-all` before every commit, ensuring:
+- All TypeScript types are valid
+- Code follows ESLint rules
+- All tests pass
+
+This prevents broken code from being committed to the repository.
 
 ## 📝 License
 

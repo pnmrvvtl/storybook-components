@@ -93,6 +93,7 @@ npm run demo
 - 🏗️ **Clean Architecture** - Separation of concerns (types, hooks, styles, view)
 - 🎭 **Styled Components** - Type-safe, scoped CSS-in-JS styling
 - 📦 **Self-Documenting** - No comments, highly descriptive naming
+- 🎪 **React Hook Form** - Form validation example with Input component integration
 
 ## 🛠️ Tech Stack
 
@@ -101,6 +102,7 @@ npm run demo
 - **Storybook 8** - Component development and documentation
 - **Framer Motion 11** - Smooth, performant animations
 - **Styled-components 6** - CSS-in-JS with theming
+- **React Hook Form 7** - Form validation and state management
 - **Vitest** - Fast unit testing framework
 - **ESLint** - Code quality and consistency
 - **Vite** - Lightning-fast build tool

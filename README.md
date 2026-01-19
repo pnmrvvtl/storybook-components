@@ -2,22 +2,87 @@
 
 A professional, reusable UI component library built with **React**, **TypeScript**, **Storybook**, and **Framer Motion**. This library features strict type safety, clean architecture, and comprehensive testing.
 
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Node.js 18+ (recommended 20.19+ or 22.12+)
+- npm or yarn
+
+### Installation
+
+```bash
+# Clone the repository
+git clone <repository-url>
+cd storybook-components
+
+# Install dependencies
+npm install
+```
+
+### Development Commands
+
+```bash
+# Run Storybook (recommended for development)
+npm run storybook
+
+# Run live demo app with all components
+npm run demo
+
+# Run tests
+npm test
+
+# Run tests in watch mode
+npm run test:watch
+
+# Type checking
+npm run type-check
+
+# Lint code
+npm run lint
+
+# Run all quality checks
+npm run check-all
+
+# Build library
+npm run build
+```
+
+## 🎮 Live Demo
+
+Experience all components working together in a real application:
+
+```bash
+npm run demo
+```
+
 ## 📸 Component Screenshots
 
 ### Input Component
 
 ![Input Component - Different States](./screenshots/input-states.png)
+
 *Text input, password toggle, clearable, error state, and disabled state*
 
 ### Toast Component
 
 ![Toast Component - Variants](./screenshots/toast-variants.png)
+
 *Success, error, and info toast notifications with auto-dismiss*
+
+
 
 ### Sidebar Component
 
 ![Sidebar Component - Nested Menus](./screenshots/sidebar-nested.png)
+
 *Sidebar with expandable nested menu items and smooth animations*
+
+### Demo App
+
+![Demo App](./screenshots/demo.png)
+
+*Demo app with all components working together*
 
 ## ✨ Features
 
@@ -67,60 +132,6 @@ Responsive navigation panel with nested menu support:
 - **Click-outside**: Auto-close when clicking outside
 - **Keyboard Support**: ESC key to close
 - **Icons**: Optional icon support for menu items
-
-## 🚀 Getting Started
-
-### Prerequisites
-
-- Node.js 18+ (recommended 20.19+ or 22.12+)
-- npm or yarn
-
-### Installation
-
-```bash
-# Clone the repository
-git clone <repository-url>
-cd react-component-library
-
-# Install dependencies
-npm install
-```
-
-### Development Commands
-
-```bash
-# Run Storybook (recommended for development)
-npm run storybook
-
-# Run live demo app with all components
-npm run demo
-
-# Run tests
-npm test
-
-# Run tests in watch mode
-npm run test:watch
-
-# Type checking
-npm run type-check
-
-# Lint code
-npm run lint
-
-# Run all quality checks
-npm run check-all
-
-# Build library
-npm run build
-```
-
-## 🎮 Live Demo
-
-Experience all components working together in a real application:
-
-```bash
-npm run demo
-```
 
 The demo app includes:
 - **Form with Input components** - Text, email, and password fields with validation

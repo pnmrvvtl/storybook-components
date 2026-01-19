@@ -1,5 +1,5 @@
 {
-  "name": "react-component-library",
+  "name": "storybook-components",
   "version": "1.0.0",
   "description": "A professional React component library with Storybook, TypeScript, and Framer Motion",
   "type": "module",

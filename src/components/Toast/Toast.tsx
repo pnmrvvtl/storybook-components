@@ -1,3 +1,4 @@
+import { forwardRef } from 'react'
 import { motion } from 'framer-motion'
 import { useToastAutoDismiss } from './Toast.hooks'
 import type { ToastProps } from './Toast.types'
@@ -44,13 +45,13 @@ const iconMap = {
     info: InfoIcon
 }
 
-export const Toast = ({
+export const Toast = forwardRef<HTMLDivElement, ToastProps>(({
     toastId,
     messageText,
     variantType,
     durationMs,
     onDismissToast
-}: ToastProps) => {
+}, ref) => {
     useToastAutoDismiss(toastId, durationMs, onDismissToast)
 
     const IconComponent = iconMap[variantType]
@@ -61,10 +62,12 @@ export const Toast = ({
 
     return (
         <motion.div
+            ref={ref}
             initial={{ opacity: 0, x: 100, scale: 0.9 }}
             animate={{ opacity: 1, x: 0, scale: 1 }}
             exit={{ opacity: 0, x: 100, scale: 0.9 }}
             transition={{ duration: 0.3, ease: 'easeOut' }}
+            layout
         >
             <ToastItem $variantType={variantType}>
                 <ToastIcon $variantType={variantType}>
@@ -82,4 +85,6 @@ export const Toast = ({
             </ToastItem>
         </motion.div>
     )
-}
+})
+
+Toast.displayName = 'Toast'
